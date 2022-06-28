@@ -1,0 +1,554 @@
+@book{Bailis2015,
+    editor    = {Peter Bailis and Joseph M. Hellerstein and Michael Stonebraker},
+    title     = {Readings in Database Systems, 5th Edition},
+    year      = {2015},
+    url       = {http://www.redbook.io/},
+    timestamp = {Fri, 12 May 2017 01:00:00 +0200},
+    biburl    = {https://dblp.org/rec/books/others/red.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Leis2015,
+    author = {Leis, Viktor and Gubichev, Andrey and Mirchev, Atanas and Boncz, Peter and Kemper, Alfons and Neumann, Thomas},
+    title = {How Good Are Query Optimizers, Really?},
+    year = {2015},
+    issue_date = {November 2015},
+    publisher = {VLDB Endowment},
+    volume = {9},
+    number = {3},
+    issn = {2150-8097},
+    url = {https://doi.org/10.14778/2850583.2850594},
+    doi = {10.14778/2850583.2850594},
+    abstract = {Finding a good join order is crucial for query performance. In this paper, we introduce the Join Order Benchmark (JOB) and experimentally revisit the main components in the classic query optimizer architecture using a complex, real-world data set and realistic multi-join queries. We investigate the quality of industrial-strength cardinality estimators and find that all estimators routinely produce large errors. We further show that while estimates are essential for finding a good join order, query performance is unsatisfactory if the query engine relies too heavily on these estimates. Using another set of experiments that measure the impact of the cost model, we find that it has much less influence on query performance than the cardinality estimates. Finally, we investigate plan enumeration techniques comparing exhaustive dynamic programming with heuristic algorithms and find that exhaustive enumeration improves performance despite the sub-optimal cardinality estimates.},
+    journal = {Proc. VLDB Endow.},
+    month = nov,
+    pages = {204–215},
+    numpages = {12}
+}
+
+@article{Kossmann2000,
+    author = {Kossmann, Donald},
+    title = {The State of the Art in Distributed Query Processing},
+    year = {2000},
+    issue_date = {Dec. 2000},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {32},
+    number = {4},
+    issn = {0360-0300},
+    url = {https://doi.org/10.1145/371578.371598},
+    doi = {10.1145/371578.371598},
+    abstract = {Distributed data processing is becoming a reality. Businesses want to do it for many reasons, and they often must do it in order to stay competitive. While much of the infrastructure for distributed data processing is already there (e.g., modern network technology), a number of issues make distributed data processing still a complex undertaking: (1) distributed systems can become very large, involving thousands of heterogeneous sites including PCs and mainframe server machines; (2) the state of a distributed system changes rapidly because the load of sites varies over time and new sites are added to the system; (3) legacy systems need to be integrated—such legacy systems usually have not been designed for distributed data processing and now need to interact with other (modern) systems in a distributed environment. This paper presents the state of the art of query processing for distributed database and information systems.  The paper presents the “textbook” architecture for distributed query processing and a series of techniques that are particularly useful for distributed database systems. These techniques include special join techniques, techniques to exploit intraquery paralleli sm, techniques to reduce communication costs, and techniques to exploit caching and replication of data. Furthermore, the paper discusses different kinds of distributed systems such as client-server, middleware (multitier), and heterogeneous database systems, and shows how query processing works in these systems.},
+    journal = {ACM Comput. Surv.},
+    month = dec,
+    pages = {422–469},
+    numpages = {48},
+    keywords = {database application systems, query execution, query optimization, middleware, caching, wrappers, replication, client-server databases, multitier architectures, dissemination-based information systems, economic models for query processing}
+}
+
+@inproceedings{Graefe1993,
+    author = {Graefe, Goetz and McKenna, William J.},
+    title = {The Volcano Optimizer Generator: Extensibility and Efficient Search},
+    year = {1993},
+    isbn = {0818635703},
+    publisher = {IEEE Computer Society},
+    address = {USA},
+    booktitle = {Proceedings of the Ninth International Conference on Data Engineering},
+    pages = {209–218},
+    numpages = {10}
+}
+
+@article{Graefe1995,
+  title={The Cascades Framework for Query Optimization},
+  author={G. Graefe},
+  journal={IEEE Data Eng. Bull.},
+  year={1995},
+  volume={18},
+  pages={19-29}
+}
+
+@inproceedings{Selinger1979,
+    author = {Selinger, P. Griffiths and Astrahan, M. M. and Chamberlin, D. D. and Lorie, R. A. and Price, T. G.},
+    title = {Access Path Selection in a Relational Database Management System},
+    year = {1979},
+    isbn = {089791001X},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/582095.582099},
+    doi = {10.1145/582095.582099},
+    abstract = {In a high level query and data manipulation language such as SQL, requests are stated non-procedurally, without reference to access paths. This paper describes how System R chooses access paths for both simple (single relation) and complex queries (such as joins), given a user specification of desired data as a boolean expression of predicates. System R is an experimental database management system developed to carry out research on the relational model of data. System R was designed and built by members of the IBM San Jose Research Laboratory.},
+    booktitle = {Proceedings of the 1979 ACM SIGMOD International Conference on Management of Data},
+    pages = {23–34},
+    numpages = {12},
+    location = {Boston, Massachusetts},
+    series = {SIGMOD '79}
+}
+
+@book{Ozsu2011,
+    author = {\"{O}zsu, M. Tamer and Valduriez, Patrick},
+    title = {Principles of Distributed Database Systems},
+    year = {2011},
+    isbn = {1441988335},
+    publisher = {Springer Publishing Company, Incorporated},
+    edition = {3rd},
+    abstract = {This third edition of a classic textbook can be used to teach at the senior undergraduate and graduate levels. The material concentrates on fundamental theories as well as techniques and algorithms. The advent of the Internet and the World Wide Web, and, more recently, the emergence of cloud computing and streaming data applications, has forced a renewal of interest in distributed and parallel data management, while, at the same time, requiring a rethinking of some of the traditional techniques. This book covers the breadth and depth of this re-emerging field. The coverage consists of two parts. The first part discusses the fundamental principles of distributed data management and includes distribution design, data integration, distributed query processing and optimization, distributed transaction management, and replication. The second part focuses on more advanced topics and includes discussion of parallel database systems, distributed object management, peer-to-peer data management, web data management, data stream systems, and cloud computing. New in this Edition: New chapters, covering database replication, database integration, multidatabase query processing, peer-to-peer data management, and web data management. Coverage of emerging topics such as data streams and cloud computing Extensive revisions and updates based on years of class testing and feedback Ancillary teaching materials are available.}
+}
+
+
+@inproceedings{Cole1994,
+    author = {Cole, Richard L. and Graefe, Goetz},
+    title = {Optimization of Dynamic Query Evaluation Plans},
+    year = {1994},
+    isbn = {0897916395},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/191839.191872},
+    doi = {10.1145/191839.191872},
+    abstract = {Traditional query optimizers assume accurate knowledge of run-time parameters such as selectivities and resource availability during plan optimization, i.e., at compile time. In reality, however, this assumption is often not justified. Therefore, the “static” plans produced by traditional optimizers may not be optimal for many of their actual run-time invocations. Instead, we propose a novel optimization model that assigns the bulk of the optimization effort to compile-time and delays carefully selected optimization decisions until run-time. Our previous work defined the run-time primitives, “dynamic plans” using “choose-plan” operators, for executing such delayed decisions, but did not solve the problem of constructing dynamic plans at compile-time. The present paper introduces techniques that solve this problem. Experience with a working prototype optimizer demonstrates (i) that the additional optimization and start-up overhead of dynamic plans compared to static plans is dominated by their advantage at run-time, (ii) that dynamic plans are as robust as the “brute-force” remedy of run-time optimization, i.e., dynamic plans maintain their optimality even if parameters change between compile-time and run-time, and (iii) that the start-up overhead of dynamic plans is significantly less than the time required for complete optimization at run-time. In other words, our proposed techniques are superior to both techniques considered to-date, namely compile-time optimization into a single static plan as well as run-time optimization. Finally, we believe that the concepts and technology described can be transferred to commercial query optimizers in order to improve the performance of embedded queries with host variables in the query predicate and to adapt to run-time system loads unpredictable at compile time.},
+    booktitle = {Proceedings of the 1994 ACM SIGMOD International Conference on Management of Data},
+    pages = {150–160},
+    numpages = {11},
+    location = {Minneapolis, Minnesota, USA},
+    series = {SIGMOD '94}
+}
+
+@article{Ozcan1997,
+    title={Dynamic Query Optimization in Multidatabases},
+    author={Fatma {\"O}zcan and S. Arpinar and P. Koksal and Cem Evrendilek and A. Dogac},
+    journal={IEEE Data Eng. Bull.},
+    year={1997},
+    volume={20},
+    pages={38-45}
+}
+
+@article{Avnur2000,
+    author = {Avnur, Ron and Hellerstein, Joseph M.},
+    title = {Eddies: Continuously Adaptive Query Processing},
+    year = {2000},
+    issue_date = {June 2000},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {29},
+    number = {2},
+    issn = {0163-5808},
+    url = {https://doi.org/10.1145/335191.335420},
+    doi = {10.1145/335191.335420},
+    abstract = {In large federated and shared-nothing databases, resources can exhibit widely fluctuating characteristics. Assumptions made at the time a query is submitted will rarely hold throughout the duration of query processing. As a result, traditional static query optimization and execution techniques are ineffective in these environments.In this paper we introduce a query processing mechanism called an eddy, which continuously reorders operators in a query plan as it runs. We characterize the moments of symmetry during which pipelined joins can be easily reordered, and the synchronization barriers that require inputs from different sources to be coordinated. By combining eddies with appropriate join algorithms, we merge the optimization and execution phases of query processing, allowing each tuple to have a flexible ordering of the query operators. This flexibility is controlled by a combination of fluid dynamics and a simple learning algorithm. Our initial implementation demonstrates promising results, with eddies performing nearly as well as a static optimizer/executor in static scenarios, and providing dramatic improvements in dynamic execution environments.},
+    journal = {SIGMOD Rec.},
+    month = may,
+    pages = {261–272},
+    numpages = {12}
+}
+
+@inproceedings{Lohman1985,
+    title={Query Processing in R*},
+    author={G. Lohman and C. Mohan and L. Haas and Dean S. Daniels and B. Lindsay and P. Selinger and P. Wilms},
+    booktitle={Query Processing in Database Systems},
+    year={1985}
+}
+
+@book{Mitchell1997,
+    author = {Mitchell, Thomas M.},
+    title = {Machine Learning},
+    year = {1997},
+    isbn = {0070428077},
+    publisher = {McGraw-Hill, Inc.},
+    address = {USA},
+    edition = {1},
+    abstract = {This exciting addition to the McGraw-Hill Series in Computer Science focuses on the concepts and techniques that contribute to the rapidly changing field of machine learning--including probability and statistics, artificial intelligence, and neural networks--unifying them all in a logical and coherent manner. Machine Learning serves as a useful reference tool for software developers and researchers, as well as an outstanding text for college students. Table of contents Chapter 1. Introduction Chapter 2. Concept Learning and the General-to-Specific Ordering Chapter 3. Decision Tree Learning Chapter 4. Artificial Neural Networks Chapter 5. Evaluating Hypotheses Chapter 6. Bayesian Learning Chapter 7. Computational Learning Theory Chapter 8. Instance-Based Learning Chapter 9. Inductive Logic Programming Chapter 10. Analytical Learning Chapter 11. Combining Inductive and Analytical Learning Chapter 12. Reinforcement Learning.}
+}
+
+@inbook{Rumelhart1986,
+    author = {Rumelhart, D. E. and Hinton, G. E. and Williams, R. J.},
+    title = {Learning Internal Representations by Error Propagation},
+    year = {1986},
+    isbn = {026268053X},
+    publisher = {MIT Press},
+    address = {Cambridge, MA, USA},
+    booktitle = {Parallel Distributed Processing: Explorations in the Microstructure of Cognition, Vol. 1: Foundations},
+    pages = {318–362},
+    numpages = {45}
+}
+
+@article{Hochreiter1997,
+    author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+    year = {1997},
+    month = {12},
+    pages = {1735-80},
+    title = {Long Short-term Memory},
+    volume = {9},
+    journal = {Neural computation},
+    doi = {10.1162/neco.1997.9.8.1735}
+}
+
+@misc{Cho2014,
+    title={Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation}, 
+    author={Kyunghyun Cho and Bart van Merrienboer and Caglar Gulcehre and Dzmitry Bahdanau and Fethi Bougares and Holger Schwenk and Yoshua Bengio},
+    year={2014},
+    eprint={1406.1078},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+
+@article{Schuster1997,
+    author={Schuster, M. and Paliwal, K.K.},
+    journal={IEEE Transactions on Signal Processing},   title={Bidirectional recurrent neural networks},
+    year={1997},
+    volume={45},
+    number={11},
+    pages={2673-2681},
+    doi={10.1109/78.650093}
+}
+
+@article{Wang2016,
+    title={Database Meets Deep Learning},
+    volume={45},
+    ISSN={0163-5808},
+    url={http://dx.doi.org/10.1145/3003665.3003669},
+    DOI={10.1145/3003665.3003669},
+    number={2},
+    journal={ACM SIGMOD Record},
+    publisher={Association for Computing Machinery (ACM)},
+    author={Wang, Wei and Zhang, Meihui and Chen, Gang and Jagadish, H. V. and Ooi, Beng Chin and Tan, Kian-Lee},
+    year={2016},
+    month={Sep},
+    pages={17–22}
+}
+
+@inproceedings{Kraska2019,
+    title={SageDB: A Learned Database System},
+    author={Tim Kraska and M. Alizadeh and Alex Beutel and Ed H. Chi and Ani Kristo and Guillaume Leclerc and S. Madden and Hongzi Mao and V. Nathan},
+    booktitle={CIDR},
+    year={2019}
+}
+
+@inproceedings{Pavlo2017,
+    title={Self-Driving Database Management Systems},
+    author={Andrew Pavlo and Gustavo Angulo and Joy Arulraj and Haibin Lin and Jiexi Lin and L. Ma and Prashanth Menon and T. Mowry and Matthew Perron and Ian Quah and Siddharth Santurkar and A. Tomasic and S. Toor and D. V. Aken and Ziqi Wang and Yingjun Wu and Ran Xian and Tieying Zhang},
+    booktitle={CIDR},
+    year={2017}
+}
+
+@inproceedings{VanAken2017,
+    author = {Van Aken, Dana and Pavlo, Andrew and Gordon, Geoffrey J. and Zhang, Bohan},
+    title = {Automatic Database Management System Tuning Through Large-Scale Machine Learning},
+    year = {2017},
+    isbn = {9781450341974},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3035918.3064029},
+    doi = {10.1145/3035918.3064029},
+    abstract = {Database management system (DBMS) configuration tuning is an essential aspect of any data-intensive application effort. But this is historically a difficult task because DBMSs have hundreds of configuration "knobs" that control everything in the system, such as the amount of memory to use for caches and how often data is written to storage. The problem with these knobs is that they are not standardized (i.e., two DBMSs use a different name for the same knob), not independent (i.e., changing one knob can impact others), and not universal (i.e., what works for one application may be sub-optimal for another). Worse, information about the effects of the knobs typically comes only from (expensive) experience.To overcome these challenges, we present an automated approach that leverages past experience and collects new information to tune DBMS configurations: we use a combination of supervised and unsupervised machine learning methods to (1) select the most impactful knobs, (2) map unseen database workloads to previous workloads from which we can transfer experience, and (3) recommend knob settings. We implemented our techniques in a new tool called OtterTune and tested it on two DBMSs. Our evaluation shows that OtterTune recommends configurations that are as good as or better than ones generated by existing tools or a human expert.},
+    booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+    pages = {1009–1024},
+    numpages = {16},
+    keywords = {database management systems, database tuning, autonomic computing, machine learning},
+    location = {Chicago, Illinois, USA},
+    series = {SIGMOD '17}
+}
+
+@article{Li2019,
+    author = {Li, Guoliang and Zhou, Xuanhe and Li, Shifu and Gao, Bo},
+    title = {QTune: A Query-Aware Database Tuning System with Deep Reinforcement Learning},
+    year = {2019},
+    issue_date = {August 2019},
+    publisher = {VLDB Endowment},
+    volume = {12},
+    number = {12},
+    issn = {2150-8097},
+    url = {https://doi.org/10.14778/3352063.3352129},
+    doi = {10.14778/3352063.3352129},
+    abstract = {Database knob tuning is important to achieve high performance (e.g., high throughput and low latency). However, knob tuning is an NP-hard problem and existing methods have several limitations. First, DBAs cannot tune a lot of database instances on different environments (e.g., different database vendors). Second, traditional machine-learning methods either cannot find good configurations or rely on a lot of high-quality training examples which are rather hard to obtain. Third, they only support coarse-grained tuning (e.g., workload-level tuning) but cannot provide fine-grained tuning (e.g., query-level tuning).To address these problems, we propose a query-aware database tuning system QTune with a deep reinforcement learning (DRL) model, which can efficiently and effectively tune the database configurations. QTune first featurizes the SQL queries by considering rich features of the SQL queries. Then QTune feeds the query features into the DRL model to choose suitable configurations. We propose a Double-State Deep Deterministic Policy Gradient (DS-DDPG) model to enable query-aware database configuration tuning, which utilizes the actor-critic networks to tune the database configurations based on both the query vector and database states. QTune provides three database tuning granularities: query-level, workload-level, and cluster-level tuning. We deployed our techniques onto three real database systems, and experimental results show that QTune achieves high performance and outperforms the state-of-the-art tuning methods.},
+    journal = {Proc. VLDB Endow.},
+    month = aug,
+    pages = {2118–2130},
+    numpages = {13}
+}
+
+@misc{Marcus2018b,
+    title={Towards a Hands-Free Query Optimizer through Deep Learning}, 
+    author={Ryan Marcus and Olga Papaemmanouil},
+    year={2018},
+    eprint={1809.10212},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}
+
+@article{Trummer2019,
+    title={SkinnerDB},
+    ISBN={9781450356435},
+    url={http://dx.doi.org/10.1145/3299869.3300088},
+    DOI={10.1145/3299869.3300088},
+    journal={Proceedings of the 2019 International Conference on Management of Data},
+    publisher={ACM},
+    author={Trummer, Immanuel and Wang, Junxiong and Maram, Deepak and Moseley, Samuel and Jo, Saehan and Antonakakis, Joseph},
+    year={2019},
+    month={Jun}
+}
+
+@article{Marcus2019,
+    author = {Marcus, Ryan and Negi, Parimarjan and Mao, Hongzi and Zhang, Chi and Alizadeh, Mohammad and Kraska, Tim and Papaemmanouil, Olga and Tatbul, Nesime},
+    title = {Neo: A Learned Query Optimizer},
+    year = {2019},
+    issue_date = {July 2019},
+    publisher = {VLDB Endowment},
+    volume = {12},
+    number = {11},
+    issn = {2150-8097},
+    url = {https://doi.org/10.14778/3342263.3342644},
+    doi = {10.14778/3342263.3342644},
+    abstract = {Query optimization is one of the most challenging problems in database systems. Despite the progress made over the past decades, query optimizers remain extremely complex components that require a great deal of hand-tuning for specific workloads and datasets. Motivated by this shortcoming and inspired by recent advances in applying machine learning to data management challenges, we introduce Neo (Neural Optimizer), a novel learning-based query optimizer that relies on deep neural networks to generate query executions plans. Neo bootstraps its query optimization model from existing optimizers and continues to learn from incoming queries, building upon its successes and learning from its failures. Furthermore, Neo naturally adapts to underlying data patterns and is robust to estimation errors. Experimental results demonstrate that Neo, even when bootstrapped from a simple optimizer like PostgreSQL, can learn a model that offers similar performance to state-of-the-art commercial optimizers, and in some cases even surpass them.},
+    journal = {Proc. VLDB Endow.},
+    month = jul,
+    pages = {1705–1718},
+    numpages = {14}
+}
+
+@misc{Krishnan2019,
+    title={Learning to Optimize Join Queries With Deep Reinforcement Learning}, 
+    author={Sanjay Krishnan and Zongheng Yang and Ken Goldberg and Joseph Hellerstein and Ion Stoica},
+    year={2019},
+    eprint={1808.03196},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}
+
+@article{Marcus2018a,
+    title={Deep Reinforcement Learning for Join Order Enumeration},
+    ISBN={9781450358514},
+    url={http://dx.doi.org/10.1145/3211954.3211957},
+    DOI={10.1145/3211954.3211957},
+    journal={Proceedings of the First International Workshop on Exploiting Artificial Intelligence Techniques for Data Management},
+    publisher={ACM},
+    author={Marcus, Ryan and Papaemmanouil, Olga},
+    year={2018},
+    month={Jun}
+}
+
+@misc{Kipf2018,
+    title={Learned Cardinalities: Estimating Correlated Joins with Deep Learning}, 
+    author={Andreas Kipf and Thomas Kipf and Bernhard Radke and Viktor Leis and Peter Boncz and Alfons Kemper},
+    year={2018},
+    eprint={1809.00677},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}
+
+@article{Kiefer2017,
+    author = {Kiefer, Martin and Heimel, Max and Bre\ss{}, Sebastian and Markl, Volker},
+    title = {Estimating Join Selectivities Using Bandwidth-Optimized Kernel Density Models},
+    year = {2017},
+    issue_date = {September 2017},
+    publisher = {VLDB Endowment},
+    volume = {10},
+    number = {13},
+    issn = {2150-8097},
+    url = {https://doi.org/10.14778/3151106.3151112},
+    doi = {10.14778/3151106.3151112},
+    abstract = {Accurately predicting the cardinality of intermediate plan operations is an essential part of any modern relational query optimizer. The accuracy of said estimates has a strong and direct impact on the quality of the generated plans, and incorrect estimates can have a negative impact on query performance. One of the biggest challenges in this field is to predict the result size of join operations.Kernel Density Estimation (KDE) is a statistical method to estimate multivariate probability distributions from a data sample. Previously, we introduced a modern, self-tuning selectivity estimator for range scans based on KDE that out-performs state-of-the-art multidimensional histograms and is efficient to evaluate on graphics cards. In this paper, we extend these bandwidth-optimized KDE models to estimate the result size of single and multiple joins. In particular, we propose two approaches: (1) Building a KDE model from a sample drawn from the join result. (2) Efficiently combining the information from base table KDE models.We evaluated our KDE-based join estimators on a variety of synthetic and real-world datasets, demonstrating that they are superior to state-of-the art join estimators based on sketching or sampling.},
+    journal = {Proc. VLDB Endow.},
+    month = sep,
+    pages = {2085–2096},
+    numpages = {12}
+}
+
+@misc{Kraska2018,
+    title={The Case for Learned Index Structures}, 
+    author={Tim Kraska and Alex Beutel and Ed H. Chi and Jeffrey Dean and Neoklis Polyzotis},
+    year={2018},
+    eprint={1712.01208},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}
+
+@inproceedings{Ding2019,
+    author = {Ding, Bailu and Das, Sudipto and Marcus, Ryan and Wu, Wentao and Chaudhuri, Surajit and Narasayya, Vivek R.},
+    title = {AI Meets AI: Leveraging Query Executions to Improve Index Recommendations},
+    year = {2019},
+    isbn = {9781450356435},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3299869.3324957},
+    doi = {10.1145/3299869.3324957},
+    abstract = {State-of-the-art index tuners rely on query optimizer's cost estimates to search for the index configuration with the largest estimated execution cost improvement`. Due to well-known limitations in optimizer's estimates, in a significant fraction of cases, an index estimated to improve a query's execution cost, e.g., CPU time, makes that worse when implemented. Such errors are a major impediment for automated indexing in production systems. We observe that comparing the execution cost of two plans of the same query corresponding to different index configurations is a key step during index tuning. Instead of using optimizer's estimates for such comparison, our key insight is that formulating it as a classification task in machine learning results in significantly higher accuracy. We present a study of the design space for this classification problem. We further show how to integrate this classifier into the state-of-the-art index tuners with minimal modifications, i.e., how artificial intelligence (AI) can benefit automated indexing (AI). Our evaluation using industry-standard benchmarks and a large number of real customer workloads demonstrates up to 5x reduction in the errors in identifying the cheaper plan in a pair, which eliminates almost all query execution cost regressions when the model is used in index tuning.},
+    booktitle = {Proceedings of the 2019 International Conference on Management of Data},
+    pages = {1241–1258},
+    numpages = {18},
+    keywords = {performance tuning, relational database-as-a-service, autonomous database management, automated indexing},
+    location = {Amsterdam, Netherlands},
+    series = {SIGMOD '19}
+}
+
+@article{Brandon2018,
+    author = {Brandon, Alvaro and Pérez, María and Gupta, Smrati and Muntés-Mulero, Victor},
+    year = {2017},
+    month = {07},
+    pages = {},
+    title = {Using machine learning to optimize parallelism in big data applications},
+    volume = {86},
+    journal = {Future Generation Computer Systems},
+    doi = {10.1016/j.future.2017.07.003}
+}
+
+@inproceedings{Park2017,
+    author = {Park, Yongjoo and Tajik, Ahmad Shahab and Cafarella, Michael and Mozafari, Barzan},
+    title = {Database Learning: Toward a Database That Becomes Smarter Every Time},
+    year = {2017},
+    isbn = {9781450341974},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3035918.3064013},
+    doi = {10.1145/3035918.3064013},
+    abstract = {In today's databases, previous query answers rarely benefit answering future queries. For the first time, to the best of our knowledge, we change this paradigm in an approximate query processing (AQP) context. We make the following observation: the answer to each query reveals some degree of knowledge about the answer to another query because their answers stem from the same underlying distribution that has produced the entire dataset. Exploiting and refining this knowledge should allow us to answer queries more analytically, rather than by reading enormous amounts of raw data. Also, processing more queries should continuously enhance our knowledge of the underlying distribution, and hence lead to increasingly faster response times for future queries.We call this novel idea---learning from past query answers---Database Learning. We exploit the principle of maximum entropy to produce answers, which are in expectation guaranteed to be more accurate than existing sample-based approximations. Empowered by this idea, we build a query engine on top of Spark SQL, called Verdict. We conduct extensive experiments on real-world query traces from a large customer of a major database vendor. Our results demonstrate that database learning supports 73.7\% of these queries, speeding them up by up to 23.0x for the same accuracy level compared to existing AQP systems.},
+    booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+    pages = {587–602},
+    numpages = {16},
+    keywords = {database learning, approximate query processing, maximum entropy principle, machine learning, online aggregation},
+    location = {Chicago, Illinois, USA},
+    series = {SIGMOD '17}
+}
+
+@misc{Kaftan2018,
+    title={Cuttlefish: A Lightweight Primitive for Adaptive Query Processing}, 
+    author={Tomer Kaftan and Magdalena Balazinska and Alvin Cheung and Johannes Gehrke},
+    year={2018},
+    eprint={1802.09180},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}
+
+@article{Sellis1988,
+    author = {Sellis, Timos K.},
+    title = {Multiple-Query Optimization},
+    year = {1988},
+    issue_date = {March 1988},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {13},
+    number = {1},
+    issn = {0362-5915},
+    url = {https://doi.org/10.1145/42201.42203},
+    doi = {10.1145/42201.42203},
+    abstract = {Some recently proposed extensions to relational database systems, as well as to deductive database systems, require support for multiple-query processing. For example, in a database system enhanced with inference capabilities, a simple query involving a rule with multiple definitions may expand to more than one actual query that has to be run over the database. It is an interesting problem then to come up with algorithms that process these queries together instead of one query at a time. The main motivation for performing such an interquery optimization lies in the fact that queries may share common data. We examine the problem of multiple-query optimization in this paper. The first major contribution of the paper is a systematic look at the problem, along with the presentation and analysis of algorithms that can be used for multiple-query optimization. The second contribution lies in the presentation of experimental results. Our results show that using multiple-query processing algorithms may reduce execution cost considerably.},
+    journal = {ACM Trans. Database Syst.},
+    month = mar,
+    pages = {23–52},
+    numpages = {30}
+}
+
+@inproceedings{Idreos2018,
+    author = {Idreos, Stratos and Zoumpatianos, Kostas and Hentschel, Brian and Kester, Michael S. and Guo, Demi},
+    title = {The Data Calculator: Data Structure Design and Cost Synthesis from First Principles and Learned Cost Models},
+    year = {2018},
+    isbn = {9781450347037},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3183713.3199671},
+    doi = {10.1145/3183713.3199671},
+    abstract = {Data structures are critical in any data-driven scenario, but they are notoriously hard to design due to a massive design space and the dependence of performance on workload and hardware which evolve continuously. We present a design engine, the Data Calculator, which enables interactive and semi-automated design of data structures. It brings two innovations. First, it offers a set of fine-grained design primitives that capture the first principles of data layout design: how data structure nodes lay data out, and how they are positioned relative to each other. This allows for a structured description of the universe of possible data structure designs that can be synthesized as combinations of those primitives. The second innovation is computation of performance using learned cost models. These models are trained on diverse hardware and data profiles and capture the cost properties of fundamental data access primitives (e.g., random access). With these models, we synthesize the performance cost of complex operations on arbitrary data structure designs without having to: 1) implement the data structure, 2) run the workload, or even 3) access the target hardware. We demonstrate that the Data Calculator can assist data structure designers and researchers by accurately answering rich what-if design questions on the order of a few seconds or minutes, i.e., computing how the performance (response time) of a given data structure design is impacted by variations in the: 1) design, 2) hardware, 3) data, and 4) query workloads. This makes it effortless to test numerous designs and ideas before embarking on lengthy implementation, deployment, and hardware acquisition steps. We also demonstrate that the Data Calculator can synthesize entirely new designs, auto-complete partial designs, and detect suboptimal design choices.},
+    booktitle = {Proceedings of the 2018 International Conference on Management of Data},
+    pages = {535–550},
+    numpages = {16},
+    keywords = {learned cost models, data structure synthesis},
+    location = {Houston, TX, USA},
+    series = {SIGMOD '18}
+}
+
+@misc{Marcus2020,
+    title={Bao: Learning to Steer Query Optimizers}, 
+    author={Ryan Marcus and Parimarjan Negi and Hongzi Mao and Nesime Tatbul and Mohammad Alizadeh and Tim Kraska},
+    year={2020},
+    eprint={2004.03814},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}
+
+@inproceedings{Akdere2012,
+    author={Akdere, Mert and Çetintemel, Ugur and Riondato, Matteo and Upfal, Eli and Zdonik, Stanley B.},
+    booktitle={2012 IEEE 28th International Conference on Data Engineering},   title={Learning-based Query Performance Modeling and Prediction},
+    year={2012},
+    volume={},
+    number={},
+    pages={390-401},
+    doi={10.1109/ICDE.2012.64}
+}
+
+@article{Graefe1993b,
+    author = {Graefe, Goetz},
+    title = {Query Evaluation Techniques for Large Databases},
+    year = {1993},
+    issue_date = {June 1993},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {25},
+    number = {2},
+    issn = {0360-0300},
+    url = {https://doi.org/10.1145/152610.152611},
+    doi = {10.1145/152610.152611},
+    abstract = {Database management systems will continue to manage large data volumes. Thus, efficient algorithms for accessing and manipulating large sets and sequences will be required to provide acceptable performance. The advent of object-oriented and extensible database systems will not solve this problem. On the contrary, modern data models exacerbate the problem: In order to manipulate large sets of complex objects as efficiently as today's database systems manipulate simple records, query-processing algorithms and software will become more complex, and a solid understanding of algorithm and architectural issues is essential for the designer of database management software.This survey provides a foundation for the design and implementation of query execution facilities in new database management systems. It describes a wide array of practical query evaluation techniques for both relational and postrelational database systems, including iterative execution of complex query evaluation plans, the duality of sort- and hash-based set-matching algorithms, types of parallel query execution and their implementation, and special operators for emerging database application domains.},
+    journal = {ACM Comput. Surv.},
+    month = jun,
+    pages = {73–169},
+    numpages = {97},
+    keywords = {object-oriented database systems, dynamic query evaluation plans, complex query evaluation plans, iterators, parallel algorithms, sort-hash duality, set-matching algorithms, operator model of parallelization, extensible database systems, relational database systems}
+}
+
+@inproceedings{ferreira2020self,
+    title={Self-tunable DBMS Replication with Reinforcement Learning},
+    author={Ferreira, Lu{\'\i}s and Coelho, F{\'a}bio and Pereira, Jos{\'e}},
+    booktitle={IFIP International Conference on Distributed Applications and Interoperable Systems},
+    pages={131--147},
+    year={2020},
+    organization={Springer}
+}
+
+@article{montiel2018,
+    author  = {Jacob Montiel and Jesse Read and Albert Bifet and Talel Abdessalem},
+    title   = {Scikit-Multiflow: A Multi-output Streaming Framework },
+    journal = {Journal of Machine Learning Research},
+    year    = {2018},
+    volume  = {19},
+    number  = {72},
+    pages   = {1-5},
+    url     = {http://jmlr.org/papers/v19/18-251.html}
+}
+
+@article{pedregosa2011,
+    title={Scikit-learn: Machine learning in Python},
+    author={Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others},
+    journal={Journal of machine learning research},
+    volume={12},
+    number={Oct},
+    pages={2825--2830},
+    year={2011}
+}
+
+@inproceedings{chaudhuri1997,
+    author = {Chaudhuri, Surajit and Narasayya, Vivek R.},
+    title = {An Efficient Cost-Driven Index Selection Tool for Microsoft SQL Server},
+    year = {1997},
+    isbn = {1558604707},
+    publisher = {Morgan Kaufmann Publishers Inc.},
+    address = {San Francisco, CA, USA},
+    booktitle = {Proceedings of the 23rd International Conference on Very Large Data Bases},
+    pages = {146–155},
+    numpages = {10},
+    series = {VLDB '97}
+}
+
+@inproceedings{vanaken17,
+  author = {Van Aken, Dana and Pavlo, Andrew and Gordon, Geoffrey J. and Zhang, Bohan},
+  title = {Automatic Database Management System Tuning Through Large-scale Machine Learning},
+  booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+  series = {SIGMOD '17},
+  year = {2017},
+  pages = {1009--1024},
+  numpages = {16},
+  url = {https://db.cs.cmu.edu/papers/2017/p1009-van-aken.pdf},
+ }
+ 
+@misc{PostGreSQL, url={https://www.postgresql.org/}, journal={PostgreSQL}, author={PostgreSQL, Global Development Group}, year={2021}, month={Jul}} 
+  
+@misc{JOB, title={gregrahn/join-order-benchmark: Join Order Benchmark (JOB)}, url={https://github.com/gregrahn/join-order-benchmark}, journal={GitHub}, author={Gregrahn}} 
+   
+@misc{tpch, title={TPC-H Homepage}, url={http://www.tpc.org/tpch/}, journal={TPC}} 

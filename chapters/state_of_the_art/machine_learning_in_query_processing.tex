@@ -1,0 +1,23 @@
+Section \ref{sec:foundations_of_query_processing} has shown that despite the progress made over the past decades, query optimizers continue to be highly complex components with well known limitations. The challenge of enumerating a set of candidate execution plans and identifying the most efficient has a prominent trade-off. Searching a larger search space increases the likelihood of finding the optimal plan but requires spending more time on query optimization than desired.
+
+As described earlier, current database systems use a set of heuristics to limit the search space at the cost of missing potential good plans to reduce the search space and optimization time as a result. More importantly, they use static strategies that do not learn from past experiences risking selecting the same bad plan multiple times and, therefore, never learning for its bad choices.
+
+Data-driven machine-learning-based applications success has left the database research community wondering whether it was possible to integrate machine learning techniques in query processing and optimization. Having described both the foundations of query processing and machine learning, this section explores how the two can overlap and looks into more detail on the many attempts made over the last few years to apply machine learning to modern query optimizers. The majority of this work has focused on replacing a single component of the optimizer with learned models.
+
+\subsection{Join Ordering}
+
+As the join order's permutations have a critical effect on the performance of relational queries \citep{Ozsu2011}, applying machine learning techniques to guide the search space in a more data-driven way has received a lot of attention.
+
+ReJOIN \citep{Marcus2018a} uses a traditional cost-based approach to query optimization where an algorithm selects the most efficient ordering for execution following a cost model. The main difference is addressing the incapability of optimizers learning from past experiences by using reinforcement learning combined with the traditional cost model to automatically learn search strategies and explore the space of possible join orderings.
+
+\subsection{Cost Model and Cardinality Estimation}
+
+Another limitation of current query optimizers is using cardinality estimates as the optimizer's cost model principal input. There is a trade-off between the accuracy of the statistics in which they are based and their maintenance costs since more accurate statistics are significantly harder to maintain. For this reason, they are usually computed based on simplifying assumptions that are frequently wrong in real-world scenarios, which may result in poor performance \citep{Leis2015}.
+
+In accordance with this observation, there is a proposal \citep{Kipf2018} to model the cardinality estimation as a supervised learning problem, with the input being query features and the output being the estimated cardinality. The model can further be used as an estimator for other, unseen queries.
+
+\subsection{Performance Tuning}
+
+Since the architecture of query optimizers have the inherent limitations mentioned above, database knob tuning became an incredibly important task to provide a higher level of flexibility to meet specific requirements and achieve higher performance. The problem is that databases have hundreds of knobs which are typically pragmatically adjusted by \gls{dbas} based on response time analysis~\citep{ferreira2020self,vanaken17}.
+
+Bao \citep{Marcus2020} is a learned system that is capable of learning what execution strategy the query optimizer should use by limiting the search space of the traditional optimizer on a per-query basis. It is a reinforcement learning-based approach that observes a reward value following the selection of a optimization strategy configuration.

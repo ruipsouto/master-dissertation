@@ -1,0 +1,13 @@
+This chapter evaluates the performance of the considered machine learning approach over the ability to improve query runtime.
+
+The evaluation shows that Odin outperforms both approaches that use the query optimizer's cost model to select the best optimizer configuration and the default configuration (i.e., all boolean flags set to true) on two different experimental workloads. 
+
+The experimental analysis is divided into two different parts. Section \ref{sec:experimental_setup}, explains the experimental setup. Section \ref{sec:query_performance_analysis} evaluates the performance against the PostgreSQL query optimizer using different workloads. The major facets of the evaluation are:
+
+\begin{itemize}
+    \item Finding whether the presented solution has the ability to improve the overall query runtime, and measure the improvement in query performance;
+    \item Inferring the training and inference cost;
+    \item Evaluating which type of queries benefit the most from the usage of machine learning to infer the best execution plan;
+    \item Interpreting the results and trade-offs between using more traditional machine learning algorithms and deep neural networks;
+    \item Hypothesising about how well the approach could be translated into a real-world scenario.
+\end{itemize}

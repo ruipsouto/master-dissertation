@@ -1,0 +1,71 @@
+\label{sec:experimental_setup}
+
+This section describes all relevant aspects of the PostgreSQL server instance, introduces the benchmarks that were used and presents the methodology for conducting the experimental evaluation.
+
+\subsection{PostgreSQL}
+ 
+All performance experiments were executed on a server with an Intel Core i3-4170 CPU (3.70 GHz) and a total of 4 cores running PostgreSQL 10.12 on Ubuntu 18.04. The system had 16 GB of RAM and a solid state drive of 128 GB.
+
+\begin{table}[H]
+\centering
+\begin{tabular*}{0.6\textwidth}{p{0.3\textwidth} p{0.3\textwidth}}
+\hline
+\textbf{Setting}                 & \textbf{Value} \\ \hline
+\textit{seq\_page\_cost}         & 1              \\
+\textit{random\_page\_cost}      & 4              \\
+\textit{cpu\_tuple\_cost}        & 0.01           \\
+\textit{cpu\_index\_tuple\_cost} & 0.04           \\
+\textit{cpu\_operator\_cost}     & 0.0025         \\ \hline
+\end{tabular*}
+\caption{PostgreSQL settings overview}
+\label{tab:settings}
+\end{table}
+
+The experiments were conducted in an out of the box PostgreSQL server, meaning that every planner constants of the optimizer were set to the default values. Table \ref{tab:settings} summarizes the used settings. The planner's estimate of the cost of a disk page sequential fetch was set to 1. The planner's estimate of the cost of a non-sequentially-fetched disk page was set to 4. Furthermore, the planner's estimate of the cost of processing each row during a query, processing each index entry during an index scan and processing each operator or function executed during a query were set to 0.01, 0.04 and 0.0025 respectively. Finally, the planner's assumption about the disk cache's effective size available to a single query was set to 4 GB.
+
+\subsection{Workloads}
+\label{sec:workloads}
+
+Two separate workloads were considered in the experiments: (1) the TPC-H benchmark \citep{tpch} and (2) the Join Order Benchmark (\gls{job}) \citep{JOB}. The precise details are outlined in Table \ref{tab:workloads} below.
+
+\subsubsection{TPC-H Benchmark}
+
+The Transaction Processing Performance Council (TPC) benchmark TPC-H has been extensively used by database software and hardware vendors and the research community. It intends to evaluate the performance of several decision support systems that process large volumes of business data and execute queries with a high degree of complexity. TPC-H comes with various data set sizes to test different scaling factors. It consists of 22 standard query templates, where each query asks a business question and includes the corresponding query to answer the question.
+
+\subsubsection{Join Order Benchmark}
+
+While the standard benchmarks like TPC-H have proven their value for evaluating query engines, they are not valuable benchmarks for the cardinality estimation component. The reason is that they use data generators based on the same simplifying assumptions that query optimizers make (i.e., uniformity, independence, the principle of inclusion) to be able to scale the benchmark data efficiently \citep{Leis2015}.
+
+Instead of using a synthetic data set, the Join Order Benchmark is a workload based on the Internet Movie Database, a real-world data set containing plenty of information about movies and related facts about actors, directors, production companies, among others. It provides a total of 113 analytical SQL queries, which have between 3 and 16 joins, with an average of 8 joins per query.
+
+For the \gls{job} benchmark, we use a further extension of 24 additional queries \citep{Marcus2018a}. These queries were designed to test systems trained on regular \gls{job} queries. They use the same relations but have very different semantics.
+
+\begin{table}[H]
+\centering
+\begin{tabular*}{0.9\textwidth}{p{0.25\textwidth} p{0.30\textwidth} p{0.35\textwidth}}
+\hline
+\textbf{Workload} & \multicolumn{1}{l}{\textbf{Database Size (GB})} & \multicolumn{1}{l}{\textbf{Query Templates (\#)}}   \\ \hline
+JOB       & 3.6       & 137                       \\
+TPC-H 10    & 10        & 22                        \\
+TPC-H 25    & 25        & 22                        \\ \hline
+\end{tabular*}
+\caption{Workloads statistics overview.}
+\label{tab:workloads}
+\end{table}
+
+For the TPC-H benchmark, two different scale factors were considered namely, 10 and 25 (i.e., 10 GB and 25 GB). Ten queries were generated  for each one of the 22 standard query templates, making a total of 220 queries. On the other hand, the \gls{job} used a snapshot of data from the Internet Movie Database (IMDb) with 3.6 GB and a total of 137 unique queries.
+
+\subsection{Modeling}
+
+To build and evaluate the predictive models, training and test data sets were derived from the aforementioned workloads. Since the goal is to improve query runtime by recommending the optimal configuration on a per-query basis, execution plans under different configurations for each query following the predictive modeling process were generated. They are outlined in Figure \ref{fig:training_sequence_diagram}. The features from those query plans were extracted (e.g., optimizer estimates and operators involved) and used the actual query runtime as the training labels.
+
+To keep the overall experimentation under control,  a limit of 5 minutes execution time per query for the \gls{tpch} 10 GB database was enforced. Within the \gls{tpch} 25 GB, the execution time limit was set to 15 minutes. Whenever the limit is reached, the query runtime is set as double the timeout value in the data set.
+
+\subsection{Metrics and Validation}
+
+To evaluate the Odin's ability to reduce query runtime, a 5-fold cross-validation method was considered. Within each fold, the models were trained on 80\% of the queries. Their ability to choose the best configuration was evaluated on the remaining 20\%. A comparison between the  learned approach against two different baselines is provided, namely:
+
+\begin{itemize}
+    \item The default optimizer configuration, where all boolean flags are set to true by default;
+    \item The configuration tuner, where decisions are made directly based on cost estimates returned by the optimizer cost model instead of a machine learning model.
+\end{itemize}

@@ -1,0 +1,13 @@
+In short, many of these solutions lead to phenomenal results, confirming the potential of integrating machine learning techniques in query optimizer components. However, one could argue that, similarly to the problems they are trying to solve, they suffer from several fundamental limitations as well. Most proposed solutions are based on reinforcement learning techniques that need a substantial amount of time and queries to learn from before matching or outperforming modern query optimizers. Another problem is that they try to replace or discard state-of-the-art query optimizers entirely and do not take advantage of their readily available mechanisms. Finally, they introduce even more complexity to a system that is already complex by itself, making it even harder to understand and extend the learned component's query planning capability.
+
+Based on the analysis of previous work, a complete and adequate solution should use the following guiding principles:
+
+\begin{itemize}
+    \item Require a short training time and amount of data to learn from. A realistic solution should not take days to train nor should it require an impractical amount of data before having a positive impact on query performance;
+
+    \item Learn from the optimizer. Since query optimizers contain decades of meticulously research and development, the solution should leverage the valuable information obtained from their generated query plans;
+    
+    \item Have a high level of interpretability. It should provide a way of understanding the decisions that are made under the hood and be adjustable when leading to poor decisions while the underlying optimizer is functioning correctly;
+
+    \item Be extensible. A good proposal should be easily extensible, making it possible to add new query plan representation techniques, machine learning algorithms and be used across different database systems.
+\end{itemize}
